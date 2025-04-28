@@ -79,6 +79,13 @@ public class BasicController {
         model.addAttribute("param2", "data2");
         return "basic/link";
     }
+
+    @GetMapping("/literal")
+    public String literal(Model model) {
+        model.addAttribute("data", "Spring!");
+        return "basic/literal";
+    }
+
     @Data
     static class User {
         private String username;
@@ -88,7 +95,6 @@ public class BasicController {
             this.username = username;
             this.age = age;
         }
-
     }
 
 }
